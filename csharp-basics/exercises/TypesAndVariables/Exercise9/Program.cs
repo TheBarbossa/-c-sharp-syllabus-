@@ -6,12 +6,12 @@ namespace Exercise9
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Please input your distance (in meters)!");
             float inputMeters = Convert.ToSingle(Console.ReadLine());
             Console.WriteLine("Please input your time in:");
             Console.Write($"Hours: ");
             int inputHours = Convert.ToInt32(Console.ReadLine());
+
             Console.Write($"Minutes: (0-59)");
             int inputMinutes = Convert.ToInt32(Console.ReadLine());
             if (inputMinutes >= 60)
@@ -19,6 +19,7 @@ namespace Exercise9
                 Console.WriteLine("Sorry, please try again!");
                 return;
             }
+
             Console.Write($"Seconds: (0-59)");
             int inputSeconds = Convert.ToInt32(Console.ReadLine());
             if (inputSeconds >= 60)
