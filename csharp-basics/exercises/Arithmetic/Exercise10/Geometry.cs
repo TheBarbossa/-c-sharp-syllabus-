@@ -10,9 +10,9 @@ namespace CalculateArea
     {
         public static double areaOfCircle(decimal radius)
         {
-            if (radius < 0)
+            if (radius <= 0)
             {
-                throw new ArgumentException("Parameter cannot be negative", nameof(radius));
+                throw new ArgumentException("Parameter cannot be 0 or negative", nameof(radius));
             }
             else
             {
@@ -22,13 +22,13 @@ namespace CalculateArea
 
         public static double areaOfRectangle(decimal length, decimal width)
         {
-            if (length < 0)
+            if (length <= 0)
             {
-                throw new ArgumentException("Parameter cannot be negative", nameof(length));
+                throw new ArgumentException("Parameter cannot be 0 or negative", nameof(length));
             }
-            else if (width < 0)
+            else if (width <= 0)
             {
-                throw new ArgumentException("Parameter cannot be negative", nameof(width));
+                throw new ArgumentException("Parameter cannot be 0 or negative", nameof(width));
             }
             else
             {
@@ -38,13 +38,13 @@ namespace CalculateArea
 
         public static double areaOfTriangle(decimal ground, decimal h)
         {
-            if (ground < 0)
+            if (ground <= 0)
             {
-                throw new ArgumentException("Parameter cannot be negative", nameof(ground));
+                throw new ArgumentException("Parameter cannot be 0 or negative", nameof(ground));
             }
-            else if (h < 0)
+            else if (h <= 0)
             {
-                throw new ArgumentException("Parameter cannot be negative", nameof(h));
+                throw new ArgumentException("Parameter cannot be 0 or negative", nameof(h));
             }
             else
             {

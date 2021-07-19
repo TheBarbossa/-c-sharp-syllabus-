@@ -8,8 +8,7 @@ namespace SumAverageRunningInt
         {
             var sum = 0;
             int count = 0;
-            int average;
-            //i don't know how to get double without changing the variable int, it always throws out errors if i try to combine int with double to get result as double.
+            double average;
 
             const int lowerBound = 1;
             const int upperBound = 100;
@@ -20,10 +19,10 @@ namespace SumAverageRunningInt
                 count++;
             }
 
-            double average2 = sum / (double)count;
+            average = sum / (double)count;
 
             Console.WriteLine($"The sum of {lowerBound} and {upperBound} is {sum}");
-            Console.WriteLine($"The average is {Math.Round(average2,2)}");
+            Console.WriteLine($"The average is {Math.Round(average,2)}");
             Console.ReadKey();
         }
     }

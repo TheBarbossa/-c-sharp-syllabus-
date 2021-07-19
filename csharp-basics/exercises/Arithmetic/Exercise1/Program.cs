@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using Microsoft.Win32.SafeHandles;
 
 namespace Exercise1
 {
@@ -14,11 +15,7 @@ namespace Exercise1
 
             bool seekingNr15()
             {
-                if (numOne == 15 | numTwo == 15 | numOne + numTwo == 15 | numOne - numTwo == 15 | numTwo - numOne == 15)
-                {
-                    return true;
-                }
-                else return false;
+                return ((numOne == 15 | numTwo == 15 | numOne + numTwo == 15 | numOne - numTwo == 15 | numTwo - numOne == 15) ? true : false);
             }
             Console.WriteLine(seekingNr15());
             Console.ReadKey();
