@@ -20,7 +20,7 @@ namespace Exercise7
             }
 
             Console.WriteLine();
-            Console.WriteLine($"Your correct input summed up number is: {sum}");
+            Console.WriteLine($"Your UpperCase characters in the string are: {sum}");
             Console.ReadKey();
         }
     }
