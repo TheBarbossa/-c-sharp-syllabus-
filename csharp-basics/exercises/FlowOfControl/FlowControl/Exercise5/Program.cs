@@ -5,17 +5,13 @@ namespace PhoneKeyPad
 {
     class Program
     {
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) {
             Console.WriteLine("Welcome, please enter your string:");
             var input = Console.ReadLine().ToLower();
-            if (ValidString(input))
-            {
+            if (ValidString(input)) {
                 char[] charArr = input.ToCharArray();
-                foreach (char ch in charArr)
-                {
-                    switch (ch)
-                    {
+                foreach (char ch in charArr) {
+                    switch (ch) {
                         case 'a':
                         case 'b':
                         case 'c':
@@ -61,18 +57,14 @@ namespace PhoneKeyPad
                     }
                 }
             }
-            else
-            {
+            else {
                 Console.WriteLine("Not a valid string.");
             }
             Console.ReadKey();
         }
-        public static bool ValidString(string inputString)
-        {
+        public static bool ValidString(string inputString) {
             string strRegex = @"(^[a-zA-Z]+$)";
-
             Regex reg = new Regex(strRegex);
-
             return reg.IsMatch(inputString) ? true : false;
         }
     }
