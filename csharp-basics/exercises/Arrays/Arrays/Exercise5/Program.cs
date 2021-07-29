@@ -13,7 +13,8 @@ namespace Exercise5
             int[] myArray = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
             var indexOfElement36 = -1;
             var indexOfElement29 = -1;
-            foreach (var elem in myArray) {
+            foreach (var elem in myArray) 
+            {
                 if (elem == 36)
                     indexOfElement36 = Array.IndexOf(myArray, 36);
                 else if (elem == 29)
