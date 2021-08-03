@@ -16,15 +16,20 @@ namespace Exercise3
             int i;
             var foundIt = false;
 
-            for (i = 0; i < integers.Length; i++) {
-                if (searchFor == integers[i]){
+            for (i = 0; i < integers.Length; i++)
+            {
+                if (searchFor == integers[i])
+                {
                     foundIt = true;
                     break;
                 }
             }
-            if (foundIt) {
+            if (foundIt)
+            {
                 Console.WriteLine("Found " + searchFor + " at index " + i);
-            } else {
+            }
+            else
+            {
                 Console.WriteLine(searchFor + " is not in the array");
             }
             Console.ReadKey();
