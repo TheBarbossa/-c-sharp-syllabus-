@@ -14,11 +14,9 @@ namespace Exercise7
             int score = 0;
             while (true)
             {
-                if (answer == "yes")
-                {
+                if (answer == "yes") {
                     var rNum = r.Next(1, 6);
-                    if (rNum == 1)
-                    {
+                    if (rNum == 1) {
                         Console.WriteLine("You rolled a 1!\nYou got 0 points.\nGAME OVER!");
                         break;
                     }
@@ -27,8 +25,7 @@ namespace Exercise7
                     Console.Write("Roll again? ");
                     answer = Console.ReadLine();
                 }
-                else
-                {
+                else {
                     Console.WriteLine($"You got {score} points.");
                     break;
                 }

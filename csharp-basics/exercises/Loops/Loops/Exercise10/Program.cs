@@ -13,7 +13,7 @@ namespace Exercise10
             Console.Write("Max? ");
             max = Convert.ToInt32(Console.ReadLine());
             min2 = min;
-            count = max - 1;
+            count = max - min;
             count2 = 0;
             for (int i = min; i <= max; i++)
             {
@@ -25,8 +25,7 @@ namespace Exercise10
                 min++;
                 for (int i = min; i <= max; i++)
                 {
-                    if (i == max)
-                    {
+                    if (i == max) {
                         Console.Write(i);
                         for (int j = min2; j <= max - count; j++)
                         {

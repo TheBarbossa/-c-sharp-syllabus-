@@ -18,18 +18,14 @@ namespace Exercise3
 
             for (i = 0; i < integers.Length; i++)
             {
-                if (searchFor == integers[i])
-                {
+                if (searchFor == integers[i]) {
                     foundIt = true;
                     break;
                 }
             }
             if (foundIt)
-            {
                 Console.WriteLine("Found " + searchFor + " at index " + i);
-            }
-            else
-            {
+            else {
                 Console.WriteLine(searchFor + " is not in the array");
             }
             Console.ReadKey();
