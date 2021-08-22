@@ -16,8 +16,8 @@ namespace Exercise7
             Dog d7 = new Dog("Molly", "female");
             Dog d8 = new Dog("Coco", "female","Molly","Buster");
 
-            d8.fathersName();
-            d3.fathersName();
+            d8.FathersName();
+            d3.FathersName();
             Console.WriteLine(d2.HasSameMotherAs(d8));
             Console.WriteLine(d1.HasSameMotherAs(d2));
             Console.ReadKey();

@@ -15,19 +15,17 @@ namespace EnergyDrinks
         private static void Main(string[] args)
         {
             Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
-            Console.WriteLine("Approximately " + energyDrinkers() + " bought at least one energy drink");
-            Console.WriteLine(preferCitrus() + " of those prefer citrus flavored energy drinks."); 
+            Console.WriteLine("Approximately " + EnergyDrinkers() + " bought at least one energy drink");
+            Console.WriteLine(PreferCitrus() + " of those prefer citrus flavored energy drinks."); 
             Console.ReadKey();
         }
-
-        static double energyDrinkers()
+        static double EnergyDrinkers()
         {
             return Math.Ceiling(NumberedSurveyed * PurchasedEnergyDrinks);
         }
-
-        static double preferCitrus()
+        static double PreferCitrus()
         {
-            return Math.Ceiling(energyDrinkers() * PreferCitrusDrinks);
+            return Math.Ceiling(EnergyDrinkers() * PreferCitrusDrinks);
         }
     }
 }

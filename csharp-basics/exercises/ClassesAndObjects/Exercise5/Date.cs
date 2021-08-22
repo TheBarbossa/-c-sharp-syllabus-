@@ -13,9 +13,9 @@ namespace Exercise5
             Month = month;
             Day = day;
         }
-        public int Year { get; set; }
-        public int Month { get; set;}
-        public int Day { get; set;}
+        private int Year { get; set; }
+        private int Month { get; set;}
+        private int Day { get; set;}
         public void DisplayDate()
         {
             Console.WriteLine($"{Month}/{Day}/{Year}");

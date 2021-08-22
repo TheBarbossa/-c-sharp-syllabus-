@@ -8,11 +8,12 @@ namespace Exercise9
 {
     class Point
     {
-        public Point(int x, int y) {
+        public int X;
+        public int Y;
+        public Point(int x, int y) 
+        {
             this.X = x;
             this.Y = y;
         }
-        public int X;
-        public int Y;
     }
 }

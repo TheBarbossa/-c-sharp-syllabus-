@@ -11,6 +11,9 @@ namespace Exercise4
 {
     class Movie
     {
+        private string Title;
+        private string Studio;
+        private string Rating;
         List<string> Movies = new List<string>();
         public Movie(string title, string studio, string rating)
         {
@@ -25,18 +28,14 @@ namespace Exercise4
             Studio = studio;
             Rating = "PG";
         }
-        private string Title;
-        private string Studio;
-        private string Rating;
+        
         public void getPG()
         {
             foreach (string movie in Movies)
             {
                 if (!(movie.Contains("PG13")))
                     Console.WriteLine(movie);
-                    
             }
         }
-
     }
 }
