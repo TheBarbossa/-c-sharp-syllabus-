@@ -41,7 +41,7 @@ namespace Exercise8
         public void TotalInterest() {
             Console.WriteLine(Math.Round(Inter, 2).ToString("N2"));
         }
-        public void Total_balance() {
+        public void TotalBalance() {
             Console.WriteLine(Math.Round(_balance, 2).ToString("N2"));
         }
     }
