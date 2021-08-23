@@ -4,21 +4,18 @@ namespace Exercise5
 {
     class Date
     {
-        public int year;
-        public int month;
-        public int day;
+        private int _year;
+        private int _month;
+        private int _day;
         public Date(int day, int month, int year)
         {
-            Year = year;
-            Month = month;
-            Day = day;
+            _year = year;
+            _month = month;
+            _day = day;
         }
-        private int Year { get; set; }
-        private int Month { get; set;}
-        private int Day { get; set;}
         public void DisplayDate()
         {
-            Console.WriteLine($"{Month}/{Day}/{Year}");
+            Console.WriteLine($"{_month}/{_day}/{_year}");
         }
     }
 }

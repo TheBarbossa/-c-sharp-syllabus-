@@ -8,29 +8,29 @@ namespace Exercise8
 {
     class SavingsAccount
     {
-        public SavingsAccount(int balance) {
-            Balance = balance;
-        }
-        public double Balance;
+        public double _balance;
         private double Withd;
         private double Depos;
         private double Inter;
+        public SavingsAccount(int balance) {
+            _balance = balance;
+        }
         public double Withdraw(int num) {
             Withd += num;
-            Balance -= num;
-            return Balance;
+            _balance -= num;
+            return _balance;
         }
         public double Deposit(int num) {
             Depos += num;
-            Balance += num;
-            return Balance;
+            _balance += num;
+            return _balance;
         }
         public double Interest(double interest) {
             double annualInter = interest / 12;
-            double interSum = Balance * annualInter;
+            double interSum = _balance * annualInter;
             Inter += interSum;
-            Balance += interSum;
-            return Balance;
+            _balance += interSum;
+            return _balance;
         }
         public void TotalDeposit() {
             Console.WriteLine(Math.Round(Depos,2).ToString("N2"));
@@ -41,8 +41,8 @@ namespace Exercise8
         public void TotalInterest() {
             Console.WriteLine(Math.Round(Inter, 2).ToString("N2"));
         }
-        public void TotalBalance() {
-            Console.WriteLine(Math.Round(Balance, 2).ToString("N2"));
+        public void Total_balance() {
+            Console.WriteLine(Math.Round(_balance, 2).ToString("N2"));
         }
     }
 }

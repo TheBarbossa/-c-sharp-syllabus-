@@ -8,12 +8,9 @@ namespace Exercise1
 {
     class Product
     {
-        public string Name
-        { get; set; }
-        public double PriceAtStart
-        { get; set; }
-        public int AmountAtStart
-        { get; set; }
+        public string Name;
+        public double PriceAtStart;
+        public int AmountAtStart;
         public Product(string name, double priceAtStart, int amountAtStart)
         {
             Name = name;

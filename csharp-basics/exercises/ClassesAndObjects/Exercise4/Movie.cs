@@ -11,25 +11,25 @@ namespace Exercise4
 {
     class Movie
     {
-        private string Title;
-        private string Studio;
-        private string Rating;
+        private string _title;
+        private string _studio;
+        private string _rating;
         List<string> Movies = new List<string>();
         public Movie(string title, string studio, string rating)
         {
-            Title = title;
-            Studio = studio;
-            Rating = rating;
+            _title = title;
+            _studio = studio;
+            _rating = rating;
             Movies.Add($"{title}, {studio}, {rating}");
         }
         public Movie(string title, string studio)
         {
-            Title = title;
-            Studio = studio;
-            Rating = "PG";
+            _title = title;
+            _studio = studio;
+            _rating = "PG";
         }
         
-        public void getPG()
+        public void GetPG()
         {
             foreach (string movie in Movies)
             {
