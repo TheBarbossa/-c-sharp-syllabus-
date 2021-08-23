@@ -17,10 +17,11 @@ namespace ConsoleApp1
             Console.WriteLine($"fuel level:{fuelGauge.ReportLevel()}");
             var odometer = new Odometer(fuelGauge);
             Console.WriteLine("running...");
-            for (int i = 0; i < 200; i++)
+            for (;;)
             {
                 odometer.Increment();
-                Console.WriteLine($"odometer report:{odometer.Report()} fuel report: {fuelGauge.ReportLevel()}");
+                Console.WriteLine($"cars odometer report:{odometer.Report()}  fuel report: {fuelGauge.ReportLevel()}");
+                if (fuelGauge.ReportLevel() == 0) break;
             }
             Console.ReadKey();
         }        
