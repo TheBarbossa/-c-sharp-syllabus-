@@ -11,7 +11,7 @@ namespace FlightPlanner
 {
     class Program
     {
-        private const string Path = "C:\\Users\\SB00366\\OneDrive - Riga Technical University\\Desktop\\Codelex\\-c-sharp-syllabus-\\csharp-basics\\exercises\\Collections\\FlightPlanner/flights.txt";
+        private const string Path = "C:/Users/SB00366/OneDrive - Riga Technical University/Desktop/Codelex/-c-sharp-syllabus-/csharp-basics/exercises/Collections/FlightPlanner/flights.txt";
 
         private static void Main(string[] args)
         {
@@ -23,12 +23,13 @@ namespace FlightPlanner
                 title = s.Substring(0, s.IndexOf('-')-1);
                 title2 = s.Substring(s.IndexOf('>') + 2);
                 if (!dictionary.ContainsKey(title))
+                {
                     dictionary.Add(title, new List<string>());
+                }
                 dictionary[title].Add(title2);
             }
             foreach (var contents in dictionary.Keys)
             {
-
                 foreach (var listMember in dictionary[contents])
                 {
                     Console.WriteLine("Key : " + contents + " member :" + listMember);
@@ -52,22 +53,28 @@ namespace FlightPlanner
                                 _startCity= ChooseCity();
                                 Console.WriteLine("Please select your destination:");
                                 foreach (var listMember in dictionary[_startCity])
+                                {
                                     Console.WriteLine(listMember);
+                                }
                                 _endCity= ChooseCity();
                                 MyFlights.Add($"{_startCity} => {_endCity}");
                                 while (_endCity != _startCity)
                                 {
-                                Console.WriteLine("Please select your next trip.");
-                                _city = _endCity;
-                                foreach (var listMember in dictionary[_city])
-                                    Console.WriteLine(listMember);
-                                Console.WriteLine("Please select your destination:");
-                                _endCity = ChooseCity();
-                                MyFlights.Add($"{_city} => {_endCity}");
+                                    Console.WriteLine("Please select your next trip.");
+                                    _city = _endCity;
+                                    foreach (var listMember in dictionary[_city])
+                                    {
+                                        Console.WriteLine(listMember);
+                                    }
+                                    Console.WriteLine("Please select your destination:");
+                                    _endCity = ChooseCity();
+                                    MyFlights.Add($"{_city} => {_endCity}");
                                 }
                                 Console.WriteLine("\nYour flight plan looks like this: ");
                                 foreach (string s in MyFlights)
+                                {
                                     Console.WriteLine(s);
+                                }
                                 break;
                             case "#":
                                 break;
