@@ -10,23 +10,13 @@ namespace ListExercise4
     {
         private static void Main(string[] args)
         {
-            // Create a list and add some colors to the list
-            var colors = new List<string>
-            {
-                "Red",
-                "Green",
-                "Orange",
-                "White",
-                "Black"
-            };
+            var colors = new List<string> {"Red", "Green", "Orange", "White", "Black"};
+            string element = colors[0];
+            Console.WriteLine("First element: " + element);
 
-            //fixme
-            //string element = ...;
-            //Console.WriteLine("First element: " + element);
-
-            //fixme
-            //element = ...;
-            //Console.WriteLine("Third element: " + element);
+            element = colors[2];
+            Console.WriteLine("Third element: " + element);
+            Console.ReadKey();
         }
     }
 }
