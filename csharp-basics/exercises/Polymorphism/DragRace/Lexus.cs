@@ -2,18 +2,23 @@ using System;
 
 namespace DragRace
 {
-    public class Lexus
+    public class Lexus : ICar,IBoost
     {
         private int currentSpeed = 0;
 
+        public Lexus()
+        {
+
+        }
+
         public void SpeedUp() 
         {
-            currentSpeed;
+            currentSpeed+=25;
         }
 
         public void SlowDown() 
         {
-            currentSpeed;
+            currentSpeed-=10;
         }
 
         public string ShowCurrentSpeed() 
@@ -23,7 +28,7 @@ namespace DragRace
 
         public void UseNitrousOxideEngine() 
         {
-            currentSpeed;
+            currentSpeed+=30;
         }
 
         public void StartEngine() 
