@@ -8,9 +8,12 @@ namespace DragRace
     {
         private int currentSpeed = 0;
 
-        public Ford()
-        {
+        public string _name { get; protected set; }
 
+        public Ford(string model, int speed)
+        {
+            currentSpeed = speed;
+            _name = model;
         }
 
         public void SpeedUp()

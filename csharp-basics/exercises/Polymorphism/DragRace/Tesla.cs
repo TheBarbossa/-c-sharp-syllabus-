@@ -6,9 +6,17 @@ namespace DragRace
     {
         private int currentSpeed = 0;
 
+        public string _name { get; protected set; }
+
+        public Tesla(string model, int speed)
+        {
+            currentSpeed = speed;
+            _name = model;
+        }
+
         public void SpeedUp() 
         {
-            currentSpeed+=20;
+            currentSpeed+=25;
         }
 
         public void SlowDown() 

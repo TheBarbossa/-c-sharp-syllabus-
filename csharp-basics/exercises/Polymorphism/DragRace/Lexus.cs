@@ -5,10 +5,12 @@ namespace DragRace
     public class Lexus : ICar,IBoost
     {
         private int currentSpeed = 0;
+        public string _name { get; protected set; }
 
-        public Lexus()
+        public Lexus(string model, int speed)
         {
-
+            currentSpeed = speed;
+            _name = model;
         }
 
         public void SpeedUp() 
@@ -18,7 +20,7 @@ namespace DragRace
 
         public void SlowDown() 
         {
-            currentSpeed-=10;
+            currentSpeed-=15;
         }
 
         public string ShowCurrentSpeed() 
@@ -28,7 +30,7 @@ namespace DragRace
 
         public void UseNitrousOxideEngine() 
         {
-            currentSpeed+=30;
+            currentSpeed+=20;
         }
 
         public void StartEngine() 

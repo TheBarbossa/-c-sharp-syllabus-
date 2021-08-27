@@ -19,14 +19,19 @@ namespace AdApp
             _fee = fee;
         }
 
-        public int Cost() 
+        public virtual double Cost() 
+        {
+            return _fee;
+        }
+
+        public virtual double TotalCost()
         {
             return _fee;
         }
 
         public override string ToString() 
         {
-            return "\nAdvert: Fee=" + _fee;
+            return "\nAdvert: Total Cost = " + Cost();
         }
     }
 }
