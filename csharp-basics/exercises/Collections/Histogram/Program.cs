@@ -9,7 +9,7 @@ namespace Histogram
 {
     class Program
     {
-        private const string Path = "C:/Users/SB00366/OneDrive - Riga Technical University/Desktop/Codelex/-c-sharp-syllabus-/csharp-basics/exercises/Collections/Histogram/midtermscores.txt";
+        private const string Path = "../Histogram/midtermscores.txt";
 
         private static void Main(string[] args)
         {
