@@ -10,29 +10,15 @@ namespace ListExercise9
     {
         static void Main(string[] args)
         {
-            var firstList = new List<string>
-            {
-                "Red",
-                "Green",
-                "Black",
-                "White",
-                "Pink"
-            };
-
+            var firstList = new List<string> {"Red", "Green", "Black", "White", "Pink"};
             Console.WriteLine(string.Join(",", firstList));
 
-            var secondList = new List<string>
-            {
-                "Red",
-                "Green",
-                "Black",
-                "White",
-                "Pink"
-            };
-
+            var secondList = new List<string> {"Red", "Green", "Black", "White", "Pink"};
             Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+
+            firstList.AddRange(secondList);
+            Console.WriteLine(string.Join(",", firstList));
+            Console.ReadKey();
         }
     }
 }
