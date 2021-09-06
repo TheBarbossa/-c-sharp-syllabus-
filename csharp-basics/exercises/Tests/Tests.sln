@@ -25,9 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook", "..\Collections
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragRace", "..\Polymorphism\DragRace\DragRace.csproj", "{AFF8F1E7-D75D-4143-8D7A-765642899265}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesAndObjects12", "Account1\ClassesAndObjects12.csproj", "{233558CB-2E9A-4B86-A4E7-87D8A294039F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesAndObjects5", "ClassesAndObjects5\ClassesAndObjects5.csproj", "{2BADA8D8-176B-49A5-A764-84276DEE53A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesAndObjects5", "ClassesAndObjects5\ClassesAndObjects5.csproj", "{2BADA8D8-176B-49A5-A764-84276DEE53A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,14 +123,6 @@ Global
 		{AFF8F1E7-D75D-4143-8D7A-765642899265}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFF8F1E7-D75D-4143-8D7A-765642899265}.Release|x64.ActiveCfg = Release|Any CPU
 		{AFF8F1E7-D75D-4143-8D7A-765642899265}.Release|x64.Build.0 = Release|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Debug|x64.Build.0 = Debug|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Release|x64.ActiveCfg = Release|Any CPU
-		{233558CB-2E9A-4B86-A4E7-87D8A294039F}.Release|x64.Build.0 = Release|Any CPU
 		{2BADA8D8-176B-49A5-A764-84276DEE53A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2BADA8D8-176B-49A5-A764-84276DEE53A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BADA8D8-176B-49A5-A764-84276DEE53A7}.Debug|x64.ActiveCfg = Debug|Any CPU
