@@ -6,6 +6,14 @@ namespace DragRace
     {
         private int currentSpeed = 0;
 
+        public string _name { get; protected set; }
+
+        public Audi(string model, int speed)
+        {
+            currentSpeed = speed;
+            _name = model;
+        }
+
         public void SpeedUp() 
         {
             currentSpeed+=10;

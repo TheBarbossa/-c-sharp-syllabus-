@@ -3,33 +3,40 @@ using System;
 namespace DragRace
 {
     public class Bmw : ICar, IBoost
-
     {
-    private int currentSpeed = 0;
+        private int currentSpeed = 0;
 
-    public void SpeedUp()
-    {
-        currentSpeed+=15;
-    }
+        public string _name { get; protected set; }
 
-    public void SlowDown()
-    {
-        currentSpeed-=10;
-    }
+        public Bmw(string model, int speed)
+        {
+            currentSpeed = speed;
+            _name = model;
+        }
 
-    public string ShowCurrentSpeed()
-    {
-        return currentSpeed.ToString();
-    }
+        public void SpeedUp()
+        {
+            currentSpeed+=15;
+        }
 
-    public void UseNitrousOxideEngine()
-    {
-        currentSpeed+=30;
-    }
+        public void SlowDown()
+        {
+            currentSpeed-=10;
+        }
 
-    public void StartEngine()
-    {
-        Console.WriteLine("Rrrrrrr.....");
-    }
+        public string ShowCurrentSpeed()
+        {
+            return currentSpeed.ToString();
+        }
+
+        public void UseNitrousOxideEngine()
+        {
+            currentSpeed+=30;
+        }
+
+        public void StartEngine()
+        {
+            Console.WriteLine("Rrrrrrr.....");
+        }
     }
 }

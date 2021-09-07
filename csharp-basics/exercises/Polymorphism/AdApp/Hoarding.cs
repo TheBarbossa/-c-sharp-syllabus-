@@ -1,23 +1,35 @@
+using System.Diagnostics.Tracing;
+
 namespace AdApp
 {
     public class Hoarding: Advert
     {
-        private int rate;
-        //per day
-        private int numDays;
+        protected int _baseCost;
+        protected int _numDays;
+        protected int _fee;
+        protected bool _primeLocation;
 
-        public Hoarding(int fee) : base(fee)
+        public Hoarding(int baseCost, int days, int fee, bool primeLocation) : base(fee)
         {
+            _numDays = days;
+            _baseCost = baseCost;
+            _fee = fee;
+            _primeLocation = primeLocation;
         }
 
-        public new int Cost() 
+        public new double Cost()
         {
-            return base.Cost();
+            return (_primeLocation) ? (_fee * .5 + _fee) * _numDays + _baseCost : _fee * _numDays + _baseCost;
         }
 
-        public override string ToString() 
+        public override double TotalCost()
         {
-            return base.ToString();
+            return base.TotalCost() + Cost();
+        }
+
+        public override string ToString()
+        {
+            return "\nHoarding: Total Cost = " + Cost();
         }
     }
 }
