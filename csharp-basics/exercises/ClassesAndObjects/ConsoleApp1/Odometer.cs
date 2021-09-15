@@ -24,15 +24,11 @@ namespace ConsoleApp1
             if (_fuelGauge.ReportLevel() <= 0) return;
             
             if (_currentMilage == 1000000)
-            {
                 _currentMilage = 0;
-            }
             _currentMilage++;
             
             if (_currentMilage % 10 == 0)
-            {
                 _fuelGauge.DecreaseLevel();
-            }
         }
     }
 }

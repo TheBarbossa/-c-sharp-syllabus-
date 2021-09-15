@@ -5,7 +5,6 @@ namespace Firm
     public class Employee : StaffMember
     {
         private string socialSecurityNumber;
-
         protected double payRate;
 
         //-----------------------------------------------------------------
