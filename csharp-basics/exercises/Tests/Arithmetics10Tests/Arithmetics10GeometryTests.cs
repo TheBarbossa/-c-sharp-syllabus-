@@ -1,6 +1,6 @@
 using System;
 using System.Reflection.Metadata;
-using Arithmetics10;
+using CalculateArea;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Arithmetics10Tests
