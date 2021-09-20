@@ -30,6 +30,7 @@ namespace DragRace
                 {
                     Console.WriteLine(myCars._name);
                     Console.WriteLine(myCars.StartEngine());
+
                     myCars.SpeedUp();
                     myCars.SpeedUp();
                     myCars.SpeedUp();

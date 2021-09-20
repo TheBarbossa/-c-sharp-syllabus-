@@ -8,25 +8,35 @@ namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
         private static void Main(string[] args)
         {
-            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla" };
 
-            //todo - replace array with an List and print out the results
+            List<string> array1 = new List<string>
+                {"Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla"};
 
-            //todo - replace array with a HashSet and print out the results
+            foreach (string gee1 in array1)
+            {
+                Console.WriteLine(gee1);
+            }
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            HashSet<string> array2 = new HashSet<string> { "Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla" };
+
+            foreach (string gee2 in array2)
+            {
+                Console.WriteLine(gee2);
+            }
+
+            Dictionary<string, string> array3 = new Dictionary<string, string>()
+            {
+                {"Audi","Germany"},{"BMW","Germany"},{"Honda","Japan"},{"Mercedes","Germany"},{"Volkswagen","Germany"},{"Tesla","USA"}
+            };
+
+            foreach (var gee3 in array3)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", gee3.Key, gee3.Value);
+            }
+            Console.ReadKey();
         }
     }
 }

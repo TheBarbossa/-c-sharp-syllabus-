@@ -10,20 +10,14 @@ namespace ListExercise5
     {
         static void Main(string[] args)
         {
-            var colors = new List<string>
-            {
-                "Red",
-                "Green",
-                "Violet",
-                "White",
-                "Black"
-            };
-
+            var colors = new List<string> {"Red", "Green", "Violet", "White", "Black"};
             Console.WriteLine(string.Join(",", colors));
 
-            //TODO: Change the third element with "Yellow"
+            colors.Remove(colors[2]);
+            colors.Insert(2,"Yellow");
 
             Console.WriteLine(string.Join(",", colors));
+            Console.ReadKey();
         }
     }
 }
