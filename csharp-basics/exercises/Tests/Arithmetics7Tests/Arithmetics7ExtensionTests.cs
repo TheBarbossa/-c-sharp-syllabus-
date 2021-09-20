@@ -7,7 +7,7 @@ namespace Arithmetics7Tests
     public class Arithmetics7ExtensionTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestFinalPosition()
         {
             double gravity = -9.81;
             double initialVelocity = 0.0;

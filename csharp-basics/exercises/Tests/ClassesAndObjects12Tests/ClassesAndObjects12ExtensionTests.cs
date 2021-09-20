@@ -18,7 +18,7 @@ namespace ClassesAndObjects12Tests
         public void TestBalance()
         {
             var fAccount = new Account.Account("Fathers account", 100.00);
-            var balance = fAccount.balance();
+            var balance = fAccount.Balance();
             Assert.AreEqual(balance,100);
         }
 
@@ -26,7 +26,7 @@ namespace ClassesAndObjects12Tests
         public void TestDeposit()
         {
             var fAccount = new Account.Account("Fathers account", 100.00);
-            var deposit = fAccount.deposit(230);
+            var deposit = fAccount.Deposit(230);
             Assert.AreEqual(deposit, 330);
         }
 
@@ -34,14 +34,14 @@ namespace ClassesAndObjects12Tests
         public void TestDepositFail()
         {
             var fAccount = new Account.Account("Fathers account", 100.00);
-            Assert.ThrowsException<ArgumentException>(() => fAccount.deposit(-230));
+            Assert.ThrowsException<ArgumentException>(() => fAccount.Deposit(-230));
         }
 
         [TestMethod]
         public void TestWithdraw()
         {
             var fAccount = new Account.Account("Fathers account", 100.00);
-            var withdraw = fAccount.withdrawal(30);
+            var withdraw = fAccount.Withdrawal(30);
             Assert.AreEqual(withdraw, 70);
         }
 
@@ -49,7 +49,7 @@ namespace ClassesAndObjects12Tests
         public void TestWithdrawFail()
         {
             var fAccount = new Account.Account("Fathers account", 100.00);
-            Assert.ThrowsException<ArgumentException>(() => fAccount.withdrawal(230));
+            Assert.ThrowsException<ArgumentException>(() => fAccount.Withdrawal(230));
         }
     }
 }

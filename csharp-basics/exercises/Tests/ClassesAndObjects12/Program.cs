@@ -23,12 +23,12 @@ namespace Account
             Console.WriteLine(aAccount);
             Console.WriteLine(bAccount);
             Console.WriteLine(cAccount);
-            fAccount.deposit(20.0);
-            Console.WriteLine("Fathers account's balance is now: " + fAccount.balance());
-            mAccount.withdrawal(100.0);
-            fAccount.deposit(100.0);
-            Console.WriteLine("Fathers account's balance is now: " + fAccount.balance());
-            Console.WriteLine("Matt account's balance is now: " + mAccount.balance());
+            fAccount.Deposit(20.0);
+            Console.WriteLine("Fathers account's balance is now: " + fAccount.Balance());
+            mAccount.Withdrawal(100.0);
+            fAccount.Deposit(100.0);
+            Console.WriteLine("Fathers account's balance is now: " + fAccount.Balance());
+            Console.WriteLine("Matt account's balance is now: " + mAccount.Balance());
             Transfer(aAccount, bAccount, 50.0);
             Transfer(bAccount, cAccount, 25.0);
 
@@ -44,7 +44,7 @@ namespace Account
 
         public static void Transfer(Account from, Account to, double howMuch)
         {
-            to.deposit(from.withdrawal(howMuch));
+            to.Deposit(from.Withdrawal(howMuch));
         }
     }
 }

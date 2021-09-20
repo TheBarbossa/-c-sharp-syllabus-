@@ -8,24 +8,24 @@ namespace Arithmetics1
 {
     public class Arithmetics1Extension
     {
-        public static bool NumberIs15(int num)
+        public static bool IsNumber15(int num)
         {
             return (num == 15) ? true : false;
         }
 
-        public static bool NumberSum15(int num1, int num2)
+        public static bool IsNumberSum15(int num1, int num2)
         {
             return (num1 + num2 == 15) ?  true :  false;
         }
 
-        public static bool NumberDiff15(int num1, int num2)
+        public static bool IsNumberDiff15(int num1, int num2)
         {
             return (num1 - num2 == 15) ? true : false;
         }
 
         public static bool TaskCheck(int num1, int num2)
         {
-            return ((NumberIs15(num1) || NumberIs15(num2) || NumberSum15(num1, num2) || NumberDiff15(num1, num2) || NumberDiff15(num2, num1)) ? true : false);
+            return ((IsNumber15(num1) || IsNumber15(num2) || IsNumberSum15(num1, num2) || IsNumberDiff15(num1, num2) || IsNumberDiff15(num2, num1)) ? true : false);
         }
     }
 }

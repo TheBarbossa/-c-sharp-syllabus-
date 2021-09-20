@@ -10,16 +10,14 @@ namespace Arithmetics1Tests
         [TestMethod]
         public void TestOutcomeTrue()
         {
-            //Console.WriteLine("Please input first integer!");
             int numOne = 15;
-            //Console.WriteLine("Please input second integer!");
             int numTwo = 15;
 
-            var numberCheck = Arithmetics1Extension.NumberIs15(numOne);
-            var numberCheck2 = Arithmetics1Extension.NumberIs15(numTwo);
-            var sumCheck = Arithmetics1Extension.NumberSum15(numOne, numTwo);
-            var diffCheck = Arithmetics1Extension.NumberDiff15(numOne, numTwo);
-            var diffCheck2 = Arithmetics1Extension.NumberDiff15(numTwo, numOne);
+            var numberCheck = Arithmetics1Extension.IsNumber15(numOne);
+            var numberCheck2 = Arithmetics1Extension.IsNumber15(numTwo);
+            var sumCheck = Arithmetics1Extension.IsNumberSum15(numOne, numTwo);
+            var diffCheck = Arithmetics1Extension.IsNumberDiff15(numOne, numTwo);
+            var diffCheck2 = Arithmetics1Extension.IsNumberDiff15(numTwo, numOne);
             var taskChecker = Arithmetics1Extension.TaskCheck(numOne, numTwo);
 
             Assert.AreEqual(true, numberCheck);
@@ -33,16 +31,14 @@ namespace Arithmetics1Tests
         [TestMethod]
         public void TestOutcomeFalse()
         {
-            //Console.WriteLine("Please input first integer!");
             int numOne = 20;
-            //Console.WriteLine("Please input second integer!");
             int numTwo = 40;
 
-            var numberCheck = Arithmetics1Extension.NumberIs15(numOne);
-            var numberCheck2 = Arithmetics1Extension.NumberIs15(numTwo);
-            var sumCheck = Arithmetics1Extension.NumberSum15(numOne, numTwo);
-            var diffCheck = Arithmetics1Extension.NumberDiff15(numOne, numTwo);
-            var diffCheck2 = Arithmetics1Extension.NumberDiff15(numTwo, numOne);
+            var numberCheck = Arithmetics1Extension.IsNumber15(numOne);
+            var numberCheck2 = Arithmetics1Extension.IsNumber15(numTwo);
+            var sumCheck = Arithmetics1Extension.IsNumberSum15(numOne, numTwo);
+            var diffCheck = Arithmetics1Extension.IsNumberDiff15(numOne, numTwo);
+            var diffCheck2 = Arithmetics1Extension.IsNumberDiff15(numTwo, numOne);
             var taskChecker = Arithmetics1Extension.TaskCheck(numOne, numTwo);
 
             Assert.AreEqual(false, numberCheck);

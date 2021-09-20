@@ -8,29 +8,43 @@ namespace Arithmetics2Tests
     public class Arithmetics2ExtensionTests
     {
         [TestMethod]
-        public void TestNumberEven()
+        public void Test_IsNumberEven()
         {
-            //Console.Write("Please input your number: ");
             int inputNumber = 14;
 
             var isEven = Arithmetics2Extension.NumberEven(inputNumber);
-            var isOdd = Arithmetics2Extension.NumberOdd(inputNumber);
 
             Assert.AreEqual(true,isEven);
-            Assert.AreEqual(false,isOdd);
         }
 
         [TestMethod]
-        public void TestNumberOdd()
+        public void Test_IsNumberEven_False()
         {
-            //Console.Write("Please input your number: ");
-            int inputNumber = 17;
+            int inputNumber = 15;
 
             var isEven = Arithmetics2Extension.NumberEven(inputNumber);
-            var isOdd = Arithmetics2Extension.NumberOdd(inputNumber);
 
             Assert.AreEqual(false, isEven);
+        }
+
+        [TestMethod]
+        public void Test_IsNumberOdd()
+        {
+            int inputNumber = 17;
+
+            var isOdd = Arithmetics2Extension.NumberOdd(inputNumber);
+
             Assert.AreEqual(true, isOdd);
+        }
+
+        [TestMethod]
+        public void Test_IsNumberOdd_False()
+        {
+            int inputNumber = 16;
+
+            var isOdd = Arithmetics2Extension.NumberOdd(inputNumber);
+
+            Assert.AreEqual(false, isOdd);
         }
     }
 }

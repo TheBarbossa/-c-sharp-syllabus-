@@ -8,15 +8,13 @@ namespace Arithmetics8Tests
     public class Arithmetics8ExtensionTests
     {
         [TestMethod]
-        public void TestTooLittlePay()
+        public void Test_IsPayEnough()
         {
-            int employee = 1;
-            //Console.Write($"Please input employees nr.{i} worked hours: ");
+            int employeeNr = 1;
             var hoursEmp = 45;
-            //Console.Write($"Please input employees nr.{i} base pay: $");
             var basePayEmp = 3.56;
 
-            var test = Arithmetics8Extension.Employees(employee,basePayEmp,hoursEmp);
+            var test = Arithmetics8Extension.Employees(employeeNr,basePayEmp,hoursEmp);
 
             Assert.IsTrue(Arithmetics8Extension.TooLittlePay(basePayEmp));
             Assert.IsFalse(Arithmetics8Extension.TooManyHours(hoursEmp));
@@ -24,15 +22,13 @@ namespace Arithmetics8Tests
         }
 
         [TestMethod]
-        public void TestTooManyHours()
+        public void Test_IsHoursTooMany()
         {
-            int employee = 2;
-            //Console.Write($"Please input employees nr.{i} worked hours: ");
+            int employeeNr = 2;
             var hoursEmp = 90;
-            //Console.Write($"Please input employees nr.{i} base pay: $");
             var basePayEmp = 9.80;
 
-            var test = Arithmetics8Extension.Employees(employee, basePayEmp, hoursEmp);
+            var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             Assert.IsFalse(Arithmetics8Extension.TooLittlePay(basePayEmp));
             Assert.IsTrue(Arithmetics8Extension.TooManyHours(hoursEmp));
@@ -40,15 +36,13 @@ namespace Arithmetics8Tests
         }
 
         [TestMethod]
-        public void TestBothErrors()
+        public void Test_IsBothErrors_PrintFirstErrorMessage()
         {
-            int employee = 2;
-            //Console.Write($"Please input employees nr.{i} worked hours: ");
+            int employeeNr = 2;
             var hoursEmp = 90;
-            //Console.Write($"Please input employees nr.{i} base pay: $");
             var basePayEmp = 3.80;
 
-            var test = Arithmetics8Extension.Employees(employee, basePayEmp, hoursEmp);
+            var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             Assert.IsTrue(Arithmetics8Extension.TooLittlePay(basePayEmp));
             Assert.IsTrue(Arithmetics8Extension.TooManyHours(hoursEmp));
@@ -56,15 +50,13 @@ namespace Arithmetics8Tests
         }
 
         [TestMethod]
-        public void TestOvertime()
+        public void Test_IsOvertime()
         {
-            int employee = 3;
-            //Console.Write($"Please input employees nr.{i} worked hours: ");
+            int employeeNr = 3;
             var hoursEmp = 55;
-            //Console.Write($"Please input employees nr.{i} base pay: $");
             var basePayEmp = 9.00;
 
-            var test = Arithmetics8Extension.Employees(employee, basePayEmp, hoursEmp);
+            var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             Assert.IsFalse(Arithmetics8Extension.TooLittlePay(basePayEmp));
             Assert.IsFalse(Arithmetics8Extension.TooManyHours(hoursEmp));
@@ -72,15 +64,13 @@ namespace Arithmetics8Tests
         }
 
         [TestMethod]
-        public void TestNormalPay()
+        public void Test_NormalPay()
         {
-            int employee = 4;
-            //Console.Write($"Please input employees nr.{i} worked hours: ");
+            int employeeNr = 4;
             var hoursEmp = 40;
-            //Console.Write($"Please input employees nr.{i} base pay: $");
             var basePayEmp = 8.60;
 
-            var test = Arithmetics8Extension.Employees(employee, basePayEmp, hoursEmp);
+            var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             Assert.IsFalse(Arithmetics8Extension.TooLittlePay(basePayEmp));
             Assert.IsFalse(Arithmetics8Extension.TooManyHours(hoursEmp));

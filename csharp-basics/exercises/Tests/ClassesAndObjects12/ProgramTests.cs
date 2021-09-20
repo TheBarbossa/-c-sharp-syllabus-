@@ -17,7 +17,7 @@ namespace Account
             _money = v2;
         }
 
-        public double withdrawal(double i)
+        public double Withdrawal(double i)
         {
             if (_money >= i)
             {
@@ -27,7 +27,7 @@ namespace Account
             else throw new ArgumentException("You cant withdraw or transfer more money that you have in your account", nameof(_money));
         }
 
-        public double deposit(double i)
+        public double Deposit(double i)
         {
             if (i > 0)
             {
@@ -37,7 +37,7 @@ namespace Account
             else throw new ArgumentException("You cant deposit negative amount of money into your account", nameof(_money));
         }
 
-        public double balance()
+        public double Balance()
         {
             return _money;
         }
