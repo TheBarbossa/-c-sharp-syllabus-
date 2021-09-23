@@ -15,7 +15,7 @@ namespace Exercise1
 
             bool seekingNr15()
             {
-                return ((numOne == 15 | numTwo == 15 | numOne + numTwo == 15 | numOne - numTwo == 15 | numTwo - numOne == 15) ? true : false);
+                return numOne == 15 || numTwo == 15 || numOne + numTwo == 15 || numOne - numTwo == 15 || numTwo - numOne == 15;
             }
             Console.WriteLine(seekingNr15());
             Console.ReadKey();

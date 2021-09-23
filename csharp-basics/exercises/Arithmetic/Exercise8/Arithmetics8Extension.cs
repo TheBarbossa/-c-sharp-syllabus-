@@ -15,12 +15,12 @@ namespace Arithmetics8
 
         public static bool TooLittlePay(double pay)
         {
-            return (pay < 8.00)? true:false;
+            return pay < 8.00;
         }
 
         public static bool TooManyHours(int h)
         {
-            return (h > 60) ? true : false;
+            return h > 60;
         }
 
         public static bool Overtime(int h)

@@ -11,11 +11,11 @@ namespace WordCount
 
         public static bool WhiteSpace(string text,int index)
         {
-            return (char.IsWhiteSpace(text[index])) ? true : false;
+            return char.IsWhiteSpace(text[index]);
         }
         public static bool Slash(string text, int index)
         {
-            return (text[index] == '\'') ? true : false;
+            return text[index] == '\'';
         }
     }
 }
