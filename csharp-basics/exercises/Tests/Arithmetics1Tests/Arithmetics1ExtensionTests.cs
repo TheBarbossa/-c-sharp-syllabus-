@@ -8,11 +8,13 @@ namespace Arithmetics1Tests
     public class Arithmetics1ExtensionTests
     {
         [TestMethod]
-        public void TestOutcomeTrue()
+        public void Test_IsOutcomeTrue()
         {
+            // Arrange
             int numOne = 15;
             int numTwo = 15;
 
+            // Act
             var numberCheck = Arithmetics1Extension.IsNumber15(numOne);
             var numberCheck2 = Arithmetics1Extension.IsNumber15(numTwo);
             var sumCheck = Arithmetics1Extension.IsNumberSum15(numOne, numTwo);
@@ -20,6 +22,7 @@ namespace Arithmetics1Tests
             var diffCheck2 = Arithmetics1Extension.IsNumberDiff15(numTwo, numOne);
             var taskChecker = Arithmetics1Extension.TaskCheck(numOne, numTwo);
 
+            // Assert
             Assert.AreEqual(true, numberCheck);
             Assert.AreEqual(true, numberCheck2);
             Assert.AreEqual(false, sumCheck);
@@ -29,11 +32,13 @@ namespace Arithmetics1Tests
         }
 
         [TestMethod]
-        public void TestOutcomeFalse()
+        public void Test_IsOutcomeFalse()
         {
+            // Arrange
             int numOne = 20;
             int numTwo = 40;
 
+            // Act
             var numberCheck = Arithmetics1Extension.IsNumber15(numOne);
             var numberCheck2 = Arithmetics1Extension.IsNumber15(numTwo);
             var sumCheck = Arithmetics1Extension.IsNumberSum15(numOne, numTwo);
@@ -41,6 +46,7 @@ namespace Arithmetics1Tests
             var diffCheck2 = Arithmetics1Extension.IsNumberDiff15(numTwo, numOne);
             var taskChecker = Arithmetics1Extension.TaskCheck(numOne, numTwo);
 
+            // Assert
             Assert.AreEqual(false, numberCheck);
             Assert.AreEqual(false, numberCheck2);
             Assert.AreEqual(false, sumCheck);
