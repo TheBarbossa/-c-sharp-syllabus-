@@ -19,8 +19,8 @@ namespace Arithmetics8Tests
             var test = Arithmetics8Extension.Employees(employeeNr,basePayEmp,hoursEmp);
 
             // Assert
-            Assert.IsTrue(Arithmetics8Extension.TooLittlePay(basePayEmp));
-            Assert.IsFalse(Arithmetics8Extension.TooManyHours(hoursEmp));
+            Assert.IsTrue(Arithmetics8Extension.IsPayEnough(basePayEmp));
+            Assert.IsFalse(Arithmetics8Extension.IsHoursTooMany(hoursEmp));
             Assert.AreEqual("error, too little pay.\n", test);
         }
 
@@ -36,8 +36,8 @@ namespace Arithmetics8Tests
             var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             // Assert
-            Assert.IsFalse(Arithmetics8Extension.TooLittlePay(basePayEmp));
-            Assert.IsTrue(Arithmetics8Extension.TooManyHours(hoursEmp));
+            Assert.IsFalse(Arithmetics8Extension.IsPayEnough(basePayEmp));
+            Assert.IsTrue(Arithmetics8Extension.IsHoursTooMany(hoursEmp));
             Assert.AreEqual("error, too many hours.\n",test);
         }
 
@@ -53,8 +53,8 @@ namespace Arithmetics8Tests
             var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             // Assert
-            Assert.IsTrue(Arithmetics8Extension.TooLittlePay(basePayEmp));
-            Assert.IsTrue(Arithmetics8Extension.TooManyHours(hoursEmp));
+            Assert.IsTrue(Arithmetics8Extension.IsPayEnough(basePayEmp));
+            Assert.IsTrue(Arithmetics8Extension.IsHoursTooMany(hoursEmp));
             Assert.AreEqual("error, too many hours.\n", test);
         }
 
@@ -70,9 +70,9 @@ namespace Arithmetics8Tests
             var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             // Assert
-            Assert.IsFalse(Arithmetics8Extension.TooLittlePay(basePayEmp));
-            Assert.IsFalse(Arithmetics8Extension.TooManyHours(hoursEmp));
-            Assert.IsTrue(Arithmetics8Extension.Overtime(hoursEmp));
+            Assert.IsFalse(Arithmetics8Extension.IsPayEnough(basePayEmp));
+            Assert.IsFalse(Arithmetics8Extension.IsHoursTooMany(hoursEmp));
+            Assert.IsTrue(Arithmetics8Extension.IsOvertime(hoursEmp));
         }
 
         [TestMethod]
@@ -87,9 +87,9 @@ namespace Arithmetics8Tests
             var test = Arithmetics8Extension.Employees(employeeNr, basePayEmp, hoursEmp);
 
             // Assert
-            Assert.IsFalse(Arithmetics8Extension.TooLittlePay(basePayEmp));
-            Assert.IsFalse(Arithmetics8Extension.TooManyHours(hoursEmp));
-            Assert.IsFalse(Arithmetics8Extension.Overtime(hoursEmp));
+            Assert.IsFalse(Arithmetics8Extension.IsPayEnough(basePayEmp));
+            Assert.IsFalse(Arithmetics8Extension.IsHoursTooMany(hoursEmp));
+            Assert.IsFalse(Arithmetics8Extension.IsOvertime(hoursEmp));
         }
     }
 }

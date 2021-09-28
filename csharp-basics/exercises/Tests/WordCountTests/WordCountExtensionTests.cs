@@ -8,19 +8,24 @@ namespace WordCountTests
     public class WordCountExtensionTests
     {
         [TestMethod]
-        public void Test_FileNotFound()
+        public void Test_IsFileNotFound()
         {
+            // Arrange
             var fileNotFound = WordCountExtension.FileExists("../lear.txt");
+
+            // Act and Assert
             Assert.AreEqual(false, fileNotFound);
         }
 
         [TestMethod]
-        public void Test_ManySpaces_TwoWords()
+        public void Test_ManySpaces_IsTwoWords()
         {
+            // Arrange
             int WordCount, index;
             WordCount = index = 0;
-
             string readText = "Dummy                  test";
+
+            // Act
             while (index < readText.Length)
             {
                 while (index < readText.Length && !WordCountExtension.WhiteSpace(readText, index))
@@ -31,19 +36,20 @@ namespace WordCountTests
                 while (index < readText.Length && WordCountExtension.WhiteSpace(readText, index))
                     index++;
             }
-            //Console.WriteLine($"Lines = {LinesCount}");
-            //Console.WriteLine($"Words = {WordCount}");
-            //Console.WriteLine($"Chars = {CharCount}");
+           
+            // Assert
             Assert.AreEqual(WordCount,2);
         }
 
         [TestMethod]
-        public void Test_ManySpacesAndSlashes_TwoWords()
+        public void Test_ManySpacesAndSlashes_IsTwoWords()
         {
+            // Arrange
             int WordCount, index;
             WordCount = index = 0;
-
             string readText = "Dummy\\  test";
+
+            // Act
             while (index < readText.Length)
             {
                 int letterCount = 0;
@@ -58,9 +64,8 @@ namespace WordCountTests
                 while (index < readText.Length && WordCountExtension.Slash(readText, index) || index < readText.Length && WordCountExtension.WhiteSpace(readText, index))
                     index++;
             }
-            //Console.WriteLine($"Lines = {LinesCount}");
-            //Console.WriteLine($"Words = {WordCount}");
-            //Console.WriteLine($"Chars = {CharCount}");
+            
+            // Assert
             Assert.AreEqual(WordCount, 2);
         }
     }

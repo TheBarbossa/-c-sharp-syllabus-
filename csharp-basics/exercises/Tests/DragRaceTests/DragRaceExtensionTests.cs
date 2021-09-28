@@ -10,10 +10,12 @@ namespace DragRaceTests
         [TestMethod]
         public void Test_UseNitro_SpeedUp_ShowResults()
         {
+            // Arrange
             var L = new Lexus("RCF", 10);
             var B = new Bmw("M3", 10);
             List<ICar> cars = new List<ICar>() {L, B};
 
+            // Act
             var Lex = L.ShowCurrentSpeed();
             var Beemer = B.ShowCurrentSpeed();
             foreach (var myCars in cars)
@@ -21,12 +23,12 @@ namespace DragRaceTests
                 myCars.SpeedUp();
                 myCars.SpeedUp();
             }
-
             B.UseNitrousOxideEngine();
             L.UseNitrousOxideEngine();
             Lex = L.ShowCurrentSpeed();
             Beemer = B.ShowCurrentSpeed();
 
+            // Assert
             Assert.AreEqual(Beemer, "70");
             Assert.AreEqual(Lex, "80");
         }
@@ -34,6 +36,7 @@ namespace DragRaceTests
         [TestMethod]
         public void Test_SpeedUp_SlowDown_ShowResults()
         {
+            // Arrange
             var L = new Lexus("RCF", 10);
             var W = new Wolksvagen("Golf-8", 10);
             var B = new Bmw("M3", 10);
@@ -41,6 +44,7 @@ namespace DragRaceTests
             var F = new Ford("Focus", 10);
             var T = new Tesla("Model-3", 10);
 
+            // Act
             List<ICar> cars = new List<ICar>()
                 {L, W, B, A, F, T};
 
@@ -65,6 +69,7 @@ namespace DragRaceTests
             Lex = L.ShowCurrentSpeed();
             Wolks = W.ShowCurrentSpeed();
 
+            // Assert
             Assert.AreEqual(Wolks, "25");
             Assert.AreEqual(Lex, "45");
             Assert.AreEqual(Tes, "50");
@@ -74,8 +79,9 @@ namespace DragRaceTests
         }
 
         [TestMethod]
-        public void Test_StartEngine()
+        public void Test_StartEngine_ShowsRightMessage()
         {
+            // Arrange
             var L = new Lexus("RCF", 10);
             var W = new Wolksvagen("Golf-8", 10);
             var B = new Bmw("M3", 10);
@@ -83,6 +89,7 @@ namespace DragRaceTests
             var F = new Ford("Focus", 10);
             var T = new Tesla("Model-3", 10);
 
+            // Act
             List<ICar> cars = new List<ICar>()
                 {L, W, B, A, F, T};
 
@@ -93,6 +100,7 @@ namespace DragRaceTests
             var Audi = A.StartEngine();
             var Ford = F.StartEngine();
 
+            // Assert
             Assert.AreEqual(Lex, "Rrrrrrr.....");
             Assert.AreEqual(Wolks, "Rrrrrrr.....");
             Assert.AreEqual(Tes, "-- silence ---");
@@ -102,8 +110,9 @@ namespace DragRaceTests
         }
 
         [TestMethod]
-        public void Test_getNameOfCar()
+        public void Test_GetNameOfCar()
         {
+            // Arrange
             var L = new Lexus("RCF", 10);
             var W = new Wolksvagen("Golf-8", 10);
             var B = new Bmw("M3", 10);
@@ -111,6 +120,7 @@ namespace DragRaceTests
             var F = new Ford("Focus", 10);
             var T = new Tesla("Model-3", 10);
 
+            // Act
             List<ICar> cars = new List<ICar>()
                 {L, W, B, A, F, T};
 
@@ -121,6 +131,7 @@ namespace DragRaceTests
             var Audi = A._name;
             var Ford = F._name;
 
+            // Assert
             Assert.AreEqual(Lex, "RCF");
             Assert.AreEqual(Wolks, "Golf-8");
             Assert.AreEqual(Tes, "Model-3");

@@ -14,7 +14,7 @@ namespace Arithmetics2Tests
             int inputNumber = 14;
 
             // Act
-            var isEven = Arithmetics2Extension.NumberEven(inputNumber);
+            var isEven = Arithmetics2Extension.IsNumberEven(inputNumber);
 
             // Assert
             Assert.AreEqual(true,isEven);
@@ -27,7 +27,7 @@ namespace Arithmetics2Tests
             int inputNumber = 15;
 
             // Act
-            var isEven = Arithmetics2Extension.NumberEven(inputNumber);
+            var isEven = Arithmetics2Extension.IsNumberEven(inputNumber);
 
             // Assert
             Assert.AreEqual(false, isEven);
@@ -40,7 +40,7 @@ namespace Arithmetics2Tests
             int inputNumber = 17;
 
             // Act
-            var isOdd = Arithmetics2Extension.NumberOdd(inputNumber);
+            var isOdd = Arithmetics2Extension.IsNumberOdd(inputNumber);
 
             // Assert
             Assert.AreEqual(true, isOdd);
@@ -53,7 +53,7 @@ namespace Arithmetics2Tests
             int inputNumber = 16;
 
             // Act
-            var isOdd = Arithmetics2Extension.NumberOdd(inputNumber);
+            var isOdd = Arithmetics2Extension.IsNumberOdd(inputNumber);
 
             // Assert
             Assert.AreEqual(false, isOdd);

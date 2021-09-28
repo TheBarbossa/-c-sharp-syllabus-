@@ -8,7 +8,7 @@ namespace Arrays6
 {
     public class Array6Extensions
     {
-        public static bool RightRange(int[] array)
+        public static bool IsRightRange(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -17,7 +17,7 @@ namespace Arrays6
             return true;
         }
 
-        public static bool FirstIsSecond(int [] array, int [] array2)
+        public static bool IsFirstSecond(int [] array, int [] array2)
         {
             for (int i = 0; i < array.Length; i++)
             {

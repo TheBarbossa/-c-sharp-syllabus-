@@ -11,37 +11,44 @@ namespace Array6Tests
         [TestMethod]
         public void Test_NumbersInArray_RightRange()
         {
+            // Arrange
             var rand = new Random();
-            
             int[] numuri1 = new int[]{1,2,3,4,5,6,78,9,10,100};
 
-            var _rightRange = Array6Extensions.RightRange(numuri1);
+            // Act
+            var _rightRange = Array6Extensions.IsRightRange(numuri1);
             
+            //Assert
             Assert.AreEqual(true, _rightRange); // parbauda, vai ir istie skaitli masiva
         }
 
         [TestMethod]
         public void Test_NumbersInArray_WrongRange()
         {
+            // Arrange
             var rand = new Random();
             int[] numuri1 = new int[] { 1, 2, 3, 4, 5, 6, 78, 9, 10, 200 };
 
-            var _rightRange = Array6Extensions.RightRange(numuri1);
+            // Act
+            var _rightRange = Array6Extensions.IsRightRange(numuri1);
 
+            //Assert
             Assert.AreEqual(false, _rightRange);
         }
 
         [TestMethod]
         public void Test_NumbersInArray_SameArrays()
         {
+            // Arrange
             var rand = new Random();
             int[] numuri1 = new int[] { 1, 2, 3, 4, 5, 6, 78, 9, 10, 100 };
             int[] numuri2 = new int[10];
 
+            // Act
             Array.Copy(numuri1, numuri2, 10);
+            var _sameArray = Array6Extensions.IsFirstSecond(numuri1, numuri2);
 
-            var _sameArray = Array6Extensions.FirstIsSecond(numuri1, numuri2);
-
+            //Assert
             Assert.AreEqual(10, numuri1.Length);
             Assert.AreEqual(10, numuri2.Length);
             Assert.AreEqual(true, _sameArray); //parbauda, vai ir tie pasi masivi pirms pedeja indeksa mainas
@@ -50,12 +57,15 @@ namespace Array6Tests
         [TestMethod]
         public void Test_NumbersInArray_DifferentArrays()
         {
+            // Arrange
             var rand = new Random();
             int[] numuri1 = new int[] { 1, 2, 3, 4, 5, 6, 78, 9, 10, 100 };
             int[] numuri2 = new int[] { 1, 2, 3, 4, 5, 6, 78, 9, 10, 99 };
 
-            var _sameArray = Array6Extensions.FirstIsSecond(numuri1, numuri2);
+            // Act
+            var _sameArray = Array6Extensions.IsFirstSecond(numuri1, numuri2);
 
+            //Assert
             Assert.AreEqual(10, numuri1.Length);
             Assert.AreEqual(10, numuri2.Length);
             Assert.AreEqual(false, _sameArray);
@@ -64,11 +74,14 @@ namespace Array6Tests
         [TestMethod]
         public void Test_NumbersInArray_LastIndexChange()
         {
+            // Arrange
             var rand = new Random();
             int[] numuri1 = new int[] { 1, 2, 3, 4, 5, 6, 78, 9, 10, 100 };
 
+            // Act
             Array6Extensions.LastIndex(numuri1);
 
+            //Assert
             Assert.AreEqual(-7, numuri1[^1]); //parbauda, vai pedejais indeks pirmajam masivam ir -7
         }
     }

@@ -9,7 +9,10 @@ namespace ClassesAndObjects5
         private int _day;
         public Date(int day, int month, int year)
         {
-            _year = year;
+            if (year >= 0)
+                _year = year;
+            else
+                throw new ArgumentException("Years cannot be negative", nameof(year));
             if (month >= 1 && month <= 12)
                 _month = month;
             else

@@ -2,11 +2,11 @@
 {
     public class Arithmetics2Extension
     {
-        public static bool NumberEven(int num)
+        public static bool IsNumberEven(int num)
         {
             return num % 2 == 0;
         }
-        public static bool NumberOdd(int num)
+        public static bool IsNumberOdd(int num)
         {
             return num % 2 != 0;
         }
