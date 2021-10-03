@@ -4,12 +4,13 @@ using System.Text;
 
 namespace DragRace
 {
-    interface ICar
+    public interface ICar
     {
         string _name { get; }
         void SpeedUp();
         void SlowDown();
         string ShowCurrentSpeed();
-        void StartEngine();
+        string StartEngine();
     }
 }
+

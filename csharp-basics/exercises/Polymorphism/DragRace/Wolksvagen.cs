@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DragRace
 {
-    public class Wolksvagen  : ICar
+    public class Wolksvagen : ICar
     {
         private int currentSpeed = 0;
 
@@ -18,22 +18,22 @@ namespace DragRace
 
         public void SpeedUp()
         {
-            currentSpeed+=10;
+            currentSpeed += 10;
         }
 
         public void SlowDown()
         {
-            currentSpeed-=5;
+            currentSpeed -= 5;
         }
 
         public string ShowCurrentSpeed()
         {
             return currentSpeed.ToString();
         }
-
-        public void StartEngine()
+        
+        public string StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            return "Rrrrrrr.....";
         }
     }
 }

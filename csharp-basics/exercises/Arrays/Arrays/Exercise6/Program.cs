@@ -1,4 +1,5 @@
 ﻿using System;
+using Arrays6;
 
 namespace Exercise6
 {
@@ -13,7 +14,7 @@ namespace Exercise6
                 numuri1[i] = rand.Next(1,101);
             }
             Array.Copy(numuri1,numuri2,10);
-            numuri1[numuri1.Length - 1] = -7;
+            Array6Extensions.LastIndex(numuri1);
             Console.Write("Array 1: ");
             foreach (int i in numuri1) {
                 Console.Write("{0} ", i);

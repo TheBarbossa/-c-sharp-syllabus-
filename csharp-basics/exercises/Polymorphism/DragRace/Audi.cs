@@ -14,24 +14,24 @@ namespace DragRace
             _name = model;
         }
 
-        public void SpeedUp() 
+        public void SpeedUp()
         {
-            currentSpeed+=10;
+            currentSpeed += 10;
         }
 
-        public void SlowDown() 
+        public void SlowDown()
         {
-            currentSpeed-=5;
+            currentSpeed -= 5;
         }
 
-        public string ShowCurrentSpeed() 
+        public string ShowCurrentSpeed()
         {
             return currentSpeed.ToString();
         }
 
-        public void StartEngine() 
+        public string StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            return "Rrrrrrr.....";
         }
     }
 }

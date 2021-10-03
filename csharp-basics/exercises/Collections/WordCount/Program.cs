@@ -24,7 +24,8 @@ namespace WordCount
 
             while (index < FileText.Length)
             {
-                while (index < FileText.Length && !char.IsWhiteSpace(FileText[index]) && FileText[index]!='\'')
+                while (index < FileText.Length && !char.IsWhiteSpace(FileText[index]) && FileText[index] != '\'')
+
                     index++;
 
                 WordCount++;

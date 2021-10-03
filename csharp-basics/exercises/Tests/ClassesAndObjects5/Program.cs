@@ -2,11 +2,13 @@
 
 namespace ClassesAndObjects5
 {
-    class Program
+    class DateTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Date day1 = new Date(23, 12, 2015);
+            Console.WriteLine(day1.DisplayDate());
+            Console.ReadKey();
         }
     }
 }
